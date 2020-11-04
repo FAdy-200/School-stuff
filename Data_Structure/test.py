@@ -29,7 +29,7 @@ function min_max_finder(list):
 		if current is greater than maximum, do
 			maximum <- current
 		# checking if the current value is smaller than mimum then assigning maximum accordingly
-		if current is smaler than minimum, do
+		if current is smaller than minimum, do
 			minimum <- current
 	return minimum, maximum
 
@@ -52,7 +52,7 @@ function number_of_even(list):
 function duplicate_remover(list):
 	"""
 	this function takes the list and deletes any duplicates it finds in it 
-	it is of complexity O(n^2) as it is itterating through the list once for each element in the list
+	it is of complexity O(n^2) as it is iterating through the list once for each element in the list
 	"""
 	# set a temporary value that points to the lists head to be the first element to be checked for duplicates
 	value <- list.head
@@ -65,7 +65,7 @@ function duplicate_remover(list):
 		while current.next is not equal NAN, do
 			# checking if there is a match
 			if current.next.data is equal value.data, do
-				# deleating the duplicate from the original list
+				# deleting the duplicate from the original list
 				current.next <- current.next.next
 			current <- current.next
 		value <- value.next

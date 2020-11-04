@@ -13,11 +13,13 @@ class ll():
     def addStart(self,val):
         val.nv=self.head
         self.head = val
+        self.numberOfValues+=1
     def addLast(self,val):
         n = self.head
         while n.nv is not None:
             n = n.nv
         n.nv = val
+        self.numberOfValues+=1
 
 
 
@@ -29,33 +31,41 @@ l.addLast(node(7))
 l.addLast(node(8))
 
 
-def r(l,k):
-    c = l.head
-    t = c.nv
-    ft = l.head
-    zz = 1
-    while zz is not None:
-        for i in range(1, k):
-            j = t.val
-            t1 = t.nv
-            kt1 = t1.val
-            t.nv = c
-            fc = c.val
-            c = t
-            t = t1
-            k = (c.val)
-        zz = None
-    l.head = t
-    # while z is not None:
-        # print(z.val)
-        # z = z.nv
-    # print("-"*10)
-c=l.head
-while c is not None:
-    # print(c.val)
-    c = c.nv
+def r(l):
+    c = l.head.nv
+    t2 = c.nv
+    c.nv = None
+    t1 = c
+    c = t2
+    t2 = t2.nv
+    while t2 is not None:
+        c.nv = t1
+        t1 = c
+        c = t2
+        t2 = t2.nv
+    c.nv = t1
+    temp = l.head
+    l.head = c
+    return l, temp
+r(l)
 
-r(l,4)
+def groupR(list,k):
+    j = 0
+    c = list.head
+    while j < list.numberOfValues:
+        midl = ll()
+        for i in range(k):
+            midl.addLast(c)
+            try:
+                c = c.nv
+            except:
+                break
+        midl = r(midl)
+
+
+
+
+
 c = l.head
 while c is not None:
     print(c.val)
