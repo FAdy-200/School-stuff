@@ -98,4 +98,63 @@ def gcd(a, b):
     if b == 0:  # checking if the reminder is equal to zero
         return a
     else:
-        return gcd(b, b % a)  # calling the same function but with swapping and applying the modulus operator
+        return gcd(b, a % b)  # calling the same function but with swapping and applying the modulus operator
+
+
+# TESTING:
+"""
+# Exercise 1:
+exercise1Example1 = [1, 2, 3, 4]
+exercise1Answer1 = listAvg(exercise1Example1)
+print(exercise1Answer1)
+exercise1Example2 = []
+exercise1Answer2 = listAvg(exercise1Example2)
+print(exercise1Answer2)
+"""
+"""
+# Exercise 2:
+exercise2Example1 = "Fadi Alahmad Alomar"
+exercise2Answer1 = vowelsCounter(exercise2Example1)
+print(exercise2Answer1)
+exercise2Example2 = 12
+exercise2Answer2 = vowelsCounter(exercise2Example2)
+print(exercise2Answer2)
+"""
+"""
+# Exercise 3:
+exercise3Example11 = 12
+exercise3Example12 = "A"
+exercise3Example11, exercise3Example12 = swap(exercise3Example11, exercise3Example12)
+print(exercise3Example11, exercise3Example12)
+exercise3Example21 = "man"
+exercise3Example22 = "woman"
+exercise3Example21, exercise3Example22 = swap(exercise3Example21, exercise3Example22)
+print(exercise3Example21, exercise3Example22)
+"""
+"""
+# Exercise 4:
+exercise4Example1 = 10
+odd(exercise4Example1)
+exercise4Example2 = "str"
+odd(exercise4Example2)
+"""
+"""
+# Exercise 5:
+exercise5Example1 = 10
+exercise5Answer1 = vol(exercise5Example1)
+print(exercise5Answer1)
+exercise5Example2 = "dog"
+exercise5Answer2 = vol(exercise5Example2)
+print(exercise5Answer2)
+"""
+"""
+# Exercise 6:
+exercise6Example11 = 12
+exercise6Example12 = 10
+exercise6Answer1 = gcd(exercise6Example11, exercise6Example12)
+print(exercise6Answer1)
+exercise6Example21 = 134512
+exercise6Example22 = 6465456
+exercise6Answer2 = gcd(exercise6Example21, exercise6Example22)
+print(exercise6Answer2)
+"""
