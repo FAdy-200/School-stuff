@@ -23,6 +23,9 @@ class Accio(Spell):
     def __init__(self):
         Spell.__init__(self, 'Accio', 'SummoningCharm')
 
+    def get_description(self):
+        return 'This charm summons an object to the caster, potentially over a significant distance?.'
+
 
 class Confundo(Spell):
     def __init__(self):
@@ -34,9 +37,6 @@ class Confundo(Spell):
 
 def study_spell(spell):
     print(spell)
-
-
-
 
 
 """
@@ -118,14 +118,14 @@ class Contact(Person, Address):
 # Tests
 # Exercise 1
 # spell = Accio()
-# spell.execute()
-# study_spell(spell)
-# study_spell(Confundo())
+# spell.execute()  # will print Accio
+# study_spell(spell)  # will print SummoningCharmAccio \n This charm summons an object to the caster, potentially over a significant distance?.
+# study_spell(Confundo()) # will print ConfundusCharmConfundo \n Cause the victim to become confused and befuddled.
 # Exercise 2
 # s = Square(2)
-# s.get_area()
+# s.get_area() # 4 is expected as an output
 # r = Rectangle(2,4)
-# r.get_area()
+# r.get_area() # 8 is expected as an output
 # Exercise 3
 # s = Contact("fadi", "fadi.alahmad@ejust.edu.eg", "sinosi street", "alex")
-# s.show()
+# s.show() # will print fadi fadi.alahmad@ejust.edu.eg \n sinosi street \n alex
