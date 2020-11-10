@@ -33,9 +33,13 @@ def outlier_finder(point, circle):
     :param circle:
     :return: True or False
     """
-    return ((circle.center.x - point.x) ^ 2 + (circle.center.y - point.y) ^ 2) ** 0.5 <= circle.radius
+    return ((circle.center.x - point.x) ** 2 + (circle.center.y - point.y) ** 2) ** 0.5 <= circle.radius
 
 
-p = Point(0, 0)
-c = Circle(Point(0,0), 1)
-print(outlier_finder(p, c))
+# Tests
+# p1 = Point(0, 0)
+# p2 = Point(2, 2)
+# c = Circle(Point(0, 0), 1)
+# print(outlier_finder(p1, c)) # True is expected
+# print(outlier_finder(p2, c)) # False is expected
+
