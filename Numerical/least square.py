@@ -10,7 +10,7 @@ def f(x):
 
 
 def make(x, m):
-    n = x.shape[0]
+    n = x.Shape[0]
     ans = np.zeros((n, m + 1))
     ans[:, 0] = 1
     for i in range(1, m + 1):

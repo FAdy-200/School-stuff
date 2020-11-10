@@ -24,10 +24,10 @@ def Iinp():
 def gauss(A):
     a = np.copy(A)
     k = True
-    for i in range(a.shape[0]):
+    for i in range(a.Shape[0]):
         try:
             if a[i, i] == 0:
-                for l in range(1, a.shape[0] - i + 1):
+                for l in range(1, a.Shape[0] - i + 1):
                     if a[i, i] == 0:
                         t = np.copy(a[i])
                         a[i] = np.copy(a[i + l])
@@ -35,7 +35,7 @@ def gauss(A):
         except:
             k = False
             break
-        for j in range(a.shape[0]):
+        for j in range(a.Shape[0]):
             if j == i:
                 pass
             else:

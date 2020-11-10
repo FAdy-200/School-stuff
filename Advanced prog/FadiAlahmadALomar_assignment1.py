@@ -26,7 +26,7 @@ def vowelsCounter(s):
     :param s: str
     :return: int
     """
-    try:  # trying to use Regex if available
+    try:  # trying to use Regex if possible
         vowels = r"[aeiouyAEIOUY]"  # English Vowels as a Regex pattern
         import re  # importing the Regex library
         if type(s) == str:  # checking if the inputs type is string
