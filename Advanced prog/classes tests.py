@@ -38,3 +38,7 @@ class tez(one,two):
 nawwar = tez()
 nawwar.fun1()
 nawwar.fun2()
+"""
+in multiple inheritance the child class takes two other classes as parent classes and inherits both of their functions 
+but if a function exist in both classes it takes the function from the first class in the parenthesis    
+"""
