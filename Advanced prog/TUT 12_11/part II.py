@@ -20,7 +20,7 @@ class EmailError(Error):
 class User:
     dic = {}
 
-    def __init__(self, name, age, email, dic):
+    def __init__(self, name, age, email, dic=dic):
         self.name = name
         self.age = age
         self.email = email
@@ -35,7 +35,6 @@ class User:
             print(e)
         dic[self.name] = (self.age, self.email)
 
-    
 
 u1 = User("fady", 16, "asdasd@asd.asd")
 u2 = User("fady", 16, "asdasd@asdsd")
