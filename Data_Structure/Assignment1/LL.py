@@ -4,23 +4,22 @@ class node():
         self.nv = None
 
 
-
-
 class ll():
     def __init__(self):
         self.head = None
         self.numberOfValues = 0
-    def addStart(self,val):
-        val.nv=self.head
+
+    def addStart(self, val):
+        val.nv = self.head
         self.head = val
-        self.numberOfValues+=1
-    def addLast(self,val):
+        self.numberOfValues += 1
+
+    def addLast(self, val):
         n = self.head
         while n.nv is not None:
             n = n.nv
         n.nv = val
-        self.numberOfValues+=1
-
+        self.numberOfValues += 1
 
 
 l = ll()
@@ -47,9 +46,12 @@ def r(l):
     temp = l.head
     l.head = c
     return l, temp
+
+
 r(l)
 
-def groupR(list,k):
+
+def groupR(list, k):
     j = 0
     c = list.head
     while j < list.numberOfValues:
@@ -63,22 +65,7 @@ def groupR(list,k):
         midl = r(midl)
 
 
-
-
-
 c = l.head
 while c is not None:
     print(c.val)
     c = c.nv
-
-
-
-
-
-
-
-
-
-
-
-
