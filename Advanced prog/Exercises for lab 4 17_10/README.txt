@@ -13,3 +13,34 @@ Exercise 1:
 
 
 Exercise 2:
+
+test case:
+workshop = Workshop("12/03/2014", "Shutl")
+
+jane = Student("Jane Doe", "I am trying to learn programming and need some help")
+lena = Student("Lena Smith", "I am really excited about learning to program!")
+vicky = Instructor("Vicky Python", "I want to help people learn coding.")
+vicky.add_skill("HTML")
+vicky.add_skill("JavaScript")
+nicole = Instructor("Nicole McMillan", "I have been programming for 5 years in Python and want to spread the love")
+nicole.add_skill("Ruby")
+workshop.add_participant(jane)
+workshop.add_participant(lena)
+workshop.add_participant(vicky)
+workshop.add_participant(nicole)
+workshop.print_details()
+
+
+expected output:
+
+
+Workshop - 12/03/2014 - Shutl
+
+Students
+1. Jane Doe - I am trying to learn programming and need some help
+2. Lena Smith - I am really excited about learning to program!
+Instructors
+1. Vicky Python -  HTML, JavaScript
+   I want to help people learn coding.
+2. Nicole McMillan -  Ruby
+   I have been programming for 5 years in Python and want to spread the love
