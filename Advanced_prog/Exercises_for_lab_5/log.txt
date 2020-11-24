@@ -1,8 +1,11 @@
-Critical error 
-Critical error 
-Critical error 
-Critical error 
-Critical error 
-Critical error 
+
 Critical error 
 Error 
+Warning Adding Strings
+Debug
+Info Info
+Critical error 
+Error 
+Warning Adding Strings
+Debug
+Info Info
