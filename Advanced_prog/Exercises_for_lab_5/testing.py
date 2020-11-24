@@ -5,6 +5,7 @@ print(l)
 try:
     5/0
 except Exception as e:
+    print(type(e))
     l.pr(type(e))
 
 
@@ -12,6 +13,7 @@ l = log.log()
 try:
     5+"s"
 except Exception as e:
+    print(type(e))
     l.pr(type(e))
 
 
