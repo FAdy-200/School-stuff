@@ -59,6 +59,7 @@ class Instructor(Members):
         self.bio = bio
         self.skills = []
 
+
     def get_bio(self):
         print(self.bio)
 
