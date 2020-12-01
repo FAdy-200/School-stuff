@@ -20,13 +20,13 @@ class Turkey:
         print("I'm flying a short distance")
 
 
-class TurkeyAdapter:
+class TurkeyAdapter(Turkey):
     """
     this class takes the turkey class and adapts it to the duck calss
     """
+
     def __init__(self, adaptee):
         """
-
         :param adaptee: Turkey instance
         """
         self.adaptee = adaptee
@@ -41,11 +41,8 @@ class TurkeyAdapter:
         """
         :calls: 5 times the fly function of the adaptee which is a Turkey instance
         """
-        self.adaptee.fly()
-        self.adaptee.fly()
-        self.adaptee.fly()
-        self.adaptee.fly()
-        self.adaptee.fly()
+        for _ in range(5):
+            self.adaptee.fly()
 
 
 def duck_interaction(duck):
