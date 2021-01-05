@@ -37,14 +37,14 @@ def binary(arr, t):
         else:
             high = mid
         mid = (low + high) // 2
-    if low < high - 1 and arr[mid] != t:
+    if arr[mid] == t:
         return mid
     return -1
 
 
 # Test cases
 # nums = [-1, 0, 3, 5, 9, 12]
-# t = 9
+# t = -1
 # print(binary(nums, t))
 
 
