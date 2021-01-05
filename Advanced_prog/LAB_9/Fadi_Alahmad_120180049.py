@@ -37,7 +37,7 @@ def binary(arr, t):
         else:
             high = mid
         mid = (low + high) // 2
-    if low < high - 1:
+    if low < high - 1 and arr[mid] != t:
         return mid
     return -1
 
