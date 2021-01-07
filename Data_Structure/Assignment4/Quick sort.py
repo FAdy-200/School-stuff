@@ -44,6 +44,7 @@ def quickR(x, l=None, r=None):
         r = len(x)-1
     if l >= r and l is not None:
         return
+
     p = (l + r) // 2
     lc = rc = False
     lo = l
