@@ -61,31 +61,59 @@ swap(arr[0],arr[-7])
 c) Merge sort
 
 d) Quick sort by followin the psudo code provided
-[8, 1, 4, 1, 5, 9, 2, 6, 5] p= 5 l= 0 r= 8
-[8, 1, 4, 1, 5, 9, 2, 6, 5]  array part the algorithm is working on
-[5, 1, 4, 1, 2, 5, 9, 6, 8]  array after modification
+[8, 1, 4, 1, 5, 9, 2, 6, 5] ,p = 5 ,l = 0 ,r = 8
+[8, 1, 4, 1, 5, 9, 2, 6, 5] the important part of the array on which the algorithm is working
+swapping arr[0], arr[8]
+array after swapping = [5, 1, 4, 1, 5, 9, 2, 6, 8] ,l = 1 ,r = 7
+swapping arr[4], arr[6]
+array after swapping = [5, 1, 4, 1, 2, 9, 5, 6, 8] ,l = 5 ,r = 5
+swapping arr[5], arr[6]
+array after swapping = [5, 1, 4, 1, 2, 5, 9, 6, 8] ,l = 5 ,r = 4
+[5, 1, 4, 1, 2, 5, 9, 6, 8] full array after modification
 
-[5, 1, 4, 1, 2, 5, 9, 6, 8] p= 6 l= 6 r= 8
-[9, 6, 8]  array part the algorithm is working on
+[5, 1, 4, 1, 2, 5, 9, 6, 8] ,p = 6 ,l = 6 ,r = 8
+[9, 6, 8] the important part of the array on which the algorithm is working
+swapping arr[6], arr[7]
+array after swapping = [6, 9, 8] ,l = 7 ,r = 6
+swapping arr[6], arr[6]
+array after swapping = [6, 9, 8] ,l = 7 ,r = 6
 [5, 1, 4, 1, 2, 5, 6, 9, 8]
 
-[5, 1, 4, 1, 2, 5, 6, 9, 8] p= 9 l= 7 r= 8
-[9, 8]  array part the algorithm is working on
-[5, 1, 4, 1, 2, 5, 6, 8, 9]  array after modification
+[5, 1, 4, 1, 2, 5, 6, 9, 8] ,p = 9 ,l = 7 ,r = 8
+[9, 8] the important part of the array on which the algorithm is working
+swapping arr[7], arr[8]
+array after swapping = [8, 9] ,l = 8 ,r = 7
+swapping arr[8], arr[8]
+array after swapping = [8, 9] ,l = 8 ,r = 7
+[5, 1, 4, 1, 2, 5, 6, 8, 9] full array after modification
 
-[5, 1, 4, 1, 2, 5, 6, 8, 9] p= 4 l= 0 r= 4
-[5, 1, 4, 1, 2]  array part the algorithm is working on
-[2, 1, 1, 4, 5, 5, 6, 8, 9]  array after modification
+[5, 1, 4, 1, 2, 5, 6, 8, 9] ,p = 4 ,l = 0 ,r = 4
+[5, 1, 4, 1, 2] the important part of the array on which the algorithm is working
+swapping arr[0], arr[4]
+array after swapping = [2, 1, 4, 1, 5] ,l = 1 ,r = 3
+swapping arr[2], arr[3]
+array after swapping = [2, 1, 1, 4, 5] ,l = 3 ,r = 2
+swapping arr[3], arr[3]
+array after swapping = [2, 1, 1, 4, 5] ,l = 3 ,r = 2
+[2, 1, 1, 4, 5, 5, 6, 8, 9] full array after modification
 
-[2, 1, 1, 4, 5, 5, 6, 8, 9] p= 1 l= 0 r= 2
-[2, 1, 1]  array part the algorithm is working on
-[1, 1, 2, 4, 5, 5, 6, 8, 9]  array after modification
+[2, 1, 1, 4, 5, 5, 6, 8, 9] ,p = 1 ,l = 0 ,r = 2
+[2, 1, 1] the important part of the array on which the algorithm is working
+swapping arr[0], arr[2]
+array after swapping = [1, 1, 2] ,l = 1 ,r = 1
+swapping arr[1], arr[1]
+array after swapping = [1, 1, 2] ,l = 2 ,r = 0
+[1, 1, 2, 4, 5, 5, 6, 8, 9] full array after modification
 
-[1, 1, 2, 4, 5, 5, 6, 8, 9] p= 1 l= 0 r= 1
-[1, 1]  array part the algorithm is working on
-[1, 1, 2, 4, 5, 5, 6, 8, 9]  array after modification
+[1, 1, 2, 4, 5, 5, 6, 8, 9] ,p = 1 ,l = 0 ,r = 1
+[1, 1] the important part of the array on which the algorithm is working
+swapping arr[0], arr[1]
+array after swapping = [1, 1] ,l = 1 ,r = 0
+[1, 1, 2, 4, 5, 5, 6, 8, 9] full array after modification
 
 [1, 1, 2, 4, 5, 5, 6, 8, 9]  Final result
+
+
 
 
 # Question 3
