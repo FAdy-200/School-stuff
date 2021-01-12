@@ -41,7 +41,7 @@ def quick(x):
 def quickR(x, l=None, r=None):
     if l is None and r is None:
         l = 0
-        r = len(x)-1
+        r = len(x) - 1
     if l >= r and l is not None:
         return
 
@@ -91,14 +91,58 @@ def quickR(x, l=None, r=None):
         quickR(x, lo, l - 1)
 
 
-x = [8, 1, 4, 1, 5, 9, 2, 6, 5]
-# x = [12] * 1000000
-z = x[:]
-y = quick(x)
-t1 = time.time()
-# print(time.time() - t1)
-# print(y)
-t2 = time.time()
-quickR(z)
-# print(time.time() - t2)
-# print(z, " Final result")
+def quickLecture(x, l=None, r=None, xo=False):
+    if l is None and r is None:
+        l = 0
+        r = len(x) - 1
+    if l >= r and l is not None:
+        return
+    xs = list(sorted(x[l:r + 1]))
+
+    p = (l + r) // 2
+    lo = l
+    ro = r
+    po = x[p]
+    print("Pivot Location in subarray =", p - l)
+    print("subarray =", x[lo:ro + 1])
+    while l <= r:
+        while x[l] < po:
+            l += 1
+        while x[r] > po:
+            r -= 1
+        if l <= r:
+            x[r], x[l] = x[l], x[r]
+            l += 1
+            r -= 1
+    print("The arrangement of the numbers =", x)
+    print()
+    if xs == x[lo:ro + 1] and xo:
+        return
+    if xs == x[lo:ro + 1]:
+        quickR(x, l, ro, True)
+        quickR(x, lo, l - 1, True)
+    else:
+        quickR(x, l, ro)
+        quickR(x, lo, l - 1)
+    # else:
+    #     print(x, "full array after modification")
+    #     print()
+    #     quickR(x, l + 1, ro)
+    #     quickR(x, lo, l - 1)
+
+
+# <editor-fold desc="Description">
+# x = [8, 1, 4, 1, 5, 9, 2, 6, 5]
+# # x = [12] * 1000000
+# z = x[:]
+# y = quick(x)
+# t1 = time.time()
+# # print(time.time() - t1)
+# # print(y)
+# t2 = time.time()
+# quickR(z)
+# # print(time.time() - t2)
+# # print(z, " Final result")
+# </editor-fold>
+x = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+print(60-sum(x))

@@ -120,5 +120,53 @@ array after swapping = [1, 1] ,l = 1 ,r = 0
 transfer the two strings into arrays then sort them using heap sort, each charecter has an ascii value thus it can be treated as a number when comparing it to other charecters
 going through bith the arrays and if they arer the same then the words are an anagrams if the arrays are not the same then the words are not an anagrams
 
+arr1=[1,4,8], arr2=[5,9]
+i = 0 ,j = 0
+ansArr=[NULL,NULL,NULL,NULL,NULL]
+arr1[i] < arr2[j] so i = i+1 and ansArr[i] = arr1[i]
+i = 1, j = 0
+ansArr=[1,NULL,NULL,NULL,NULL]
+arr1[i] < arr2[j] so i = i+1 and ansArr[i] = arr1[i]
+i = 2, j = 0
+ansArr=[1,4,NULL,NULL,NULL]
+arr1[i] > arr2[j] so j = j+1 and ansArr[j] = arr2[j]
+i = 2, j = 1
+ansArr=[1,4,5,NULL,NULL]
+arr1[i] < arr2[j] so i = i+1 and ansArr[i] = arr1[i]
+i = 3, j = 1
+ansArr=[1,4,5,8,NULL]
+i is out of range so ansArr[j:] = arr2[j:]
+ansArr=[1,4,5,8,9]
+
+First, we need to make it that once each iteration is done the pivot is in it is right place after sorting and is not going to be moved, after that if the number of elements is odd, we need to find the n/2 element, if it is even, we need to find the n//2, n//2 + 1, elements and add them then divide them by 2.
+We find the element in a position X by doing quick sort with the pivot being the middle element, and seeing if the new pivot location is X, greater than X or smaller than X. if it is X then the pivot element is the one we are looking for, if it is greater then we quick sort the side of the array that is to the left of the pivot and if it is smaller than X then we quick sort the side of the array that is to the right of the pivot.
+
+He should go wtih bubble sort as the implementation stops once it finds a pair that needs no swapping it breaks.
+in his case the swapping will happen for one iteration as the naughty boy only shifted once thus the bubble sort alogrithm will swap the first element with every element untill it is at the end then once it starts the secound iteration the alogrithm will find that there is no swapping needed as the elements are sorted and breaks.
+thus doing the sorting in O(n)
+
+Pivot Location in subarray = 3
+subarray = [2, 1, 4, 9, 3, 5, 18]
+The arrangement of the numbers = [2, 1, 4, 5, 3, 9, 18]
+
+Pivot Location in subarray = 0
+subarray = [9, 18]
+The arrangement of the numbers = [2, 1, 4, 5, 3, 9, 18]
+
+Pivot Location in subarray = 2
+subarray = [2, 1, 4, 5, 3]
+The arrangement of the numbers = [2, 1, 3, 5, 4, 9, 18]
+
+Pivot Location in subarray = 0
+subarray = [5, 4]
+The arrangement of the numbers = [2, 1, 3, 4, 5, 9, 18]
+
+Pivot Location in subarray = 1
+subarray = [2, 1, 3]
+The arrangement of the numbers = [1, 2, 3, 4, 5, 9, 18]
+
+Pivot Location in subarray = 0
+subarray = [2, 3]
+The arrangement of the numbers = [1, 2, 3, 4, 5, 9, 18]
 
 
