@@ -2,7 +2,7 @@
 #
 # Topic: Functional Programming
 # Author : Fadi Alahmad 120180049
-# Date : 05/01/2021
+# Date : 12/01/2021
 # Question 1:
 
 """
