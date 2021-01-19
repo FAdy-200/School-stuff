@@ -1,21 +1,21 @@
 # CSE314- Lab 9
 #
 # Topic: Functional Programming
-# Author : Fadi Alahmad 120180049
+# Author : Abdelrahman Medhat Saad Nawar 120180025
 # Date : 12/01/2021
 # Question 1:
 
 """
->> comprehension[0]
+comprehension[0]
 Lambs
->> comprehension[2]
+comprehension[2]
 Orangutans
 """
 
 # Question 2:
 
-text = ["fady", "alomar"]
-text_new = list(filter(lambda x: len(x) > 4, text))
+text_arr = ['Abdelrahman', 'Medhat', 'Saad', 'Nawar']
+text_arr_new = list(filter(lambda x: len(x) > 4, text_arr))
 
 # Question 3:
 
@@ -24,8 +24,7 @@ B = list(sorted(A, key=lambda x: x % 2))
 
 # Question 4:
 
-q4 = [(i, j) for i in range(1, 11) for j in range(i + 1, 11) if i % 2 != 0 and j % 2 != 0]
-
+Q = [(i, j) for i in range(1, 11) for j in range(i + 1, 11) if i % 2 != 0 and j % 2 != 0]
 
 # Question 5:
 
@@ -59,6 +58,3 @@ def u(x):
 
 def v():
     return u("secant")
-
-
-
