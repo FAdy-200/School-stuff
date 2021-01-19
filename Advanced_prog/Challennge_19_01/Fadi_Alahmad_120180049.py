@@ -126,6 +126,7 @@ class DataExtractorAndPlotter:
         """
         plot.plot(self.df.index, self.df["yoc_h1"], label="yoc_h1")
         plot.plot(self.df.index, self.df["yoc_h2"], label="yoc_h2")
+        plot.plot(self.df.index, self.df["yoc_filter"], label="yoc_filter")
         ax1 = plot.twinx()  # creating the second y-axis
         ax1.plot(self.df.index, self.df["yoc_i_adc"], "--", label="yoc_i_adc", color="brown")
         ax1.legend(loc="upper right")
@@ -165,5 +166,7 @@ class DataExtractorAndPlotter:
 #### TEST CASE ###
 ex = DataExtractorAndPlotter("outputfile.txt")
 ex.Decode()
+print()
+print()
 # ex.plot()
-ex.convertToCSV("Sensors data")
+# ex.convertToCSV("Sensors data")
