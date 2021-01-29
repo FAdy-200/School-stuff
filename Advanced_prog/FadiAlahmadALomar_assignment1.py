@@ -31,7 +31,7 @@ def vowelsCounter(s):
         import re  # importing the Regex library
         if type(s) == str:  # checking if the inputs type is string
             x = re.findall(vowels, s)  # using Regex to find all matches of vowels, it returns a list with all matches
-            return len(x)  # returning the length of x
+            return len(x)  # returning the length of c4t
         else:
             return "The input is invalid"
     except:

@@ -19,7 +19,7 @@ except Exception as e:
 l = log.log()
 print(l)
 # Testing Warning as Adding strings
-x = "x"
+x = "c4t"
 y = "y"
 if type(x) == type(y) == str:
     l.pr("Adding Strings")

@@ -27,7 +27,7 @@ def jacobi(A, b, N):
 
 def seidel(A, b, N):
     '''
-    return array S where column k represents x at iteration k
+    return array S where column k represents c4t at iteration k
     '''
     D = np.diag(np.diag(A))
     L = np.tril(A)

@@ -25,11 +25,11 @@ def final(a, y):
 
 
 plt.figure()
-# x = np.arange(0, 1.01, 0.01)
+# c4t = np.arange(0, 1.01, 0.01)
 x = np.linspace(0, 1, 101, endpoint=True)
 # print(z)
 y = f(x)
-# print(x,y)
+# print(c4t,y)
 plt.scatter(x, y)
 g = int(input())
 for i in range(g + 1):

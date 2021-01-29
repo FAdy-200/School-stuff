@@ -19,7 +19,7 @@ from prettytable import PrettyTable
 def df_approx(f, x0, h):
     """
     Forward pass difference formula
-    returns f'(x) for x = x0
+    returns f'(c4t) for c4t = x0
     """
     return (np.cos(x0 + h) - np.cos(x0)) / h
 
@@ -27,7 +27,7 @@ def df_approx(f, x0, h):
 def df_midpoint_approx(f, x0, h):
     '''
     Three point mid-point formula
-    returns f'(x) for x = x0
+    returns f'(c4t) for c4t = x0
     '''
     return (np.cos(x0 + h) - np.cos(x0 - h)) / (2 * h)
 
@@ -57,7 +57,7 @@ if __name__ == '__main__':
         rae.append(ab[i]/ab[i+1])
     table = PrettyTable()
     table.add_column("k", ks)
-    table.add_column("f'(x)", values)
+    table.add_column("f'(c4t)", values)
     table.add_column("Absolute error", ab)
     table.add_column("Ratio of error", rae)
     print(table)

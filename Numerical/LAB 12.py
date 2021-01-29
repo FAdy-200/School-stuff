@@ -40,7 +40,7 @@ def euler(f, a, b, y0, N):
 # yk = list(gg.values())
 # table = PrettyTable()
 # table.add_column('k',[i for i in range(4+1)])
-# table.add_column('x',xk)
+# table.add_column('c4t',xk)
 # table.add_column('y',yk)
 # print(table)
 
@@ -55,7 +55,7 @@ def rf(x):
 if __name__ == "__main__":
     '''
     Applying the program to the solution of the initial value problem 
-    y = (6*x**2 - 1)*y ; y(0)= 1 in the interval [0, 1]. Assume N = 4.
+    y = (6*c4t**2 - 1)*y ; y(0)= 1 in the interval [0, 1]. Assume N = 4.
     '''
     gg = euler(f, 1, 2, -1, int(1/0.05))
     r = [rf(i) for i in (gg[0])]
@@ -71,7 +71,7 @@ if __name__ == "__main__":
     '''
     Repeat the previous problem but begin with N = 4 steps and repeatedly 
     double this number of steps up to 256. Report the final y value and
-    the error given that the actual solution y(x) = exp(2*x**3 - x) and
+    the error given that the actual solution y(c4t) = exp(2*c4t**3 - c4t) and
     y(1) = e.
     '''
     # i = 4

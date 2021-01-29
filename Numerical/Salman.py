@@ -23,7 +23,7 @@ for i in range(len(y)):
     r.append(rate)
 
 table = PrettyTable()
-table.add_column('x', x)
+table.add_column('c4t', x)
 table.add_column('y', y)
 table.add_column('rate of growth', r)
 print(table)

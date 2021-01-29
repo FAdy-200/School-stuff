@@ -125,17 +125,17 @@ def quickLecture(x, l=None, r=None, xo=False):
         quickR(x, l, ro)
         quickR(x, lo, l - 1)
     # else:
-    #     print(x, "full array after modification")
+    #     print(c4t, "full array after modification")
     #     print()
-    #     quickR(x, l + 1, ro)
-    #     quickR(x, lo, l - 1)
+    #     quickR(c4t, l + 1, ro)
+    #     quickR(c4t, lo, l - 1)
 
 
 # <editor-fold desc="Description">
-# x = [8, 1, 4, 1, 5, 9, 2, 6, 5]
-# # x = [12] * 1000000
-# z = x[:]
-# y = quick(x)
+# c4t = [8, 1, 4, 1, 5, 9, 2, 6, 5]
+# # c4t = [12] * 1000000
+# z = c4t[:]
+# y = quick(c4t)
 # t1 = time.time()
 # # print(time.time() - t1)
 # # print(y)

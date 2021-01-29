@@ -36,7 +36,7 @@ for i in range(10):
     rate.append(df)
 
 table = PrettyTable()
-table.add_column('x', x)
+table.add_column('c4t', x)
 table.add_column('y', y)
 table.add_column('rate of growth', rate)
 print(table)
