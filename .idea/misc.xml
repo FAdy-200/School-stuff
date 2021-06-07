@@ -4,8 +4,9 @@
     <file url="file://$PROJECT_DIR$/Data_Structure/Assignment1/Assignment_1.py" />
     <file url="file://$PROJECT_DIR$/Data_Structure/Assignment2/Fadi_Alahmad_Alomar_120180049_Assignemnt_2_Stacks.py" />
     <file url="file://$PROJECT_DIR$/Data_Structure/Assignment3/pseudo.py" />
+    <file url="file://$PROJECT_DIR$/Data_Structure/Assignment4/assignment4.py" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6" project-jdk-type="Python SDK" />
   <component name="PyPackaging">
     <option name="earlyReleasesAsUpgrades" value="true" />
   </component>

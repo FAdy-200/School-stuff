@@ -1,0 +1,93 @@
+classDiagram
+class car{
+    +float miles_per_galon 
+    +int VIN
+    +string make_and_model
+    +int number_of_passsengers
+    +int number_of_doors
+}
+
+class Van{
+    +float miles_per_galon 
+    +int VIN
+    +string make_and_model
+    +int number_of_passsengers
+}
+
+class Truck{
+    +float miles_per_galon 
+    +int VIN
+    
+}
+
+class Vehicle{
+    +float miles_per_galon 
+    +int VIN
+    +getAttributes()
+}
+
+class Vehicles{
+    +List ~object~ Vehicle
+    +checkAvailability(int vehicle_id)
+    +getMilesPerGalon(int vehicle_id)
+    +getAttributes(int vehicle_id)
+    +getNumberAvailable(str vehicle_type)
+}
+
+class SystemInterface{
+    +getVehicleList()
+    +getVehicleCost(int vehicle_id,str type_of_cost)
+    +getCustomCost(int vehicle_id,str type_of_cost,int period_or_miles)
+    +getInsuranceCost(int vehicle_id)
+    +reserveVehicle(int vehicle_id)
+    +getVehicleAttributes(int vehicle_id)
+    +cancelReservation()
+}
+
+class RentalAgencyUI{
+    int user_id
+    int chosen_id
+    +getVehicleList()
+    +chooseVehicle()
+    +getVehicleCost(int vehicle_id,str type_of_cost)
+    +getCustomCost(int vehicle_id,str type_of_cost,int period_or_miles)
+    +getInsuranceCost(int vehicle_id)
+    +getVehicleAttributes()
+    +reserveVehicle(int vehicle_id)
+    +cancelReservation()
+}
+class Reservations{
+    +List ~object~ Reservation
+    +getReservationId(int user_id)
+    +cancelReservation(int reservation_id)
+    +reserveVehicle(int vehicle_id)
+
+}
+
+class Reservation{
+    +int reservation_id
+    +int vehicle_id
+}
+class VehicleCosts{
+    +List ~object~ VehicleCost
+    +getVehicleCost(int vehicle_id,str type_of_cost)
+    +getCustomCost(int vehicle_id,str type_of_cost,int period_or_miles)
+    +getInsuranceCost(int vehicle_id)
+}
+
+class VehicleCost{
+    +getVehicleCost(str type_of_cost)
+    +getCustomCost(str type_of_cost,int period_or_miles)
+    +getInsuranceCost()
+}
+
+Vehicle <|-- Van
+Vehicle <|-- car
+Vehicle <|-- Truck
+Vehicles o-- "1...*"Vehicle
+SystemInterface "1"--"1" Vehicles
+SystemInterface <-- RentalAgencyUI
+SystemInterface "1"--"1" Reservations
+Reservations o-- "0...*"Reservation
+SystemInterface "1"-- "1"VehicleCosts
+VehicleCosts o-- "3"VehicleCost
