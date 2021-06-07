@@ -9,7 +9,6 @@ g.add_weighted_edges_from([("z", "y", 12), ("z", "x", 8), ("x", "y", 6), ("x", "
                            ("y", "t", 7), ("v", "t", 4), ("v", "w", 4), ("v", "u", 3), ("w", "u", 3), ("u", "t", 2)])
 
 
-
 def djkesrtra(gr, n, t):
     d = dict()
     for i in g.nodes:
@@ -19,7 +18,7 @@ def djkesrtra(gr, n, t):
     while s < len(d):
         smallest = [None, math.inf]
         for i in gr[n].keys():
-            if not d[i][0] and d[i][1]>gr[n][i]["weight"] + d[n][1]:
+            if not d[i][0] and d[i][1] > gr[n][i]["weight"] + d[n][1]:
                 d[i] = [False, gr[n][i]["weight"] + d[n][1], n]
         for j, i in d.items():
             if i[1] < smallest[1] and not i[0]:
@@ -32,8 +31,9 @@ def djkesrtra(gr, n, t):
         n = smallest[0]
         s += 1
 
+
 for i in g.nodes:
-    t = table(list("#"+"xzyvtuw"))
-    t.title = i+"'s table"
+    t = table(list("#" + "xzyvtuw"))
+    t.title = i + "'s table"
     djkesrtra(g, i, t)
     print(t)
