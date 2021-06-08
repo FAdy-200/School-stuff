@@ -30,10 +30,21 @@ def djkesrtra(gr, n, t):
         d[smallest[0]][0] = True
         n = smallest[0]
         s += 1
+    return d
 
+
+def printRoute(d, x):
+    while x is not None:
+        print(x, end="<-")
+        x = d[x][2]
+    print()
 
 for i in g.nodes:
     t = table(list("#" + "xzyvtuw"))
     t.title = i + "'s table"
-    djkesrtra(g, i, t)
+    d = djkesrtra(g, i, t)
+
     print(t)
+    print("Fastest Route")
+    for i in g.nodes:
+        printRoute(d, i)
